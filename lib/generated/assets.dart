@@ -3,8 +3,12 @@ class Assets {
   Assets._();
 
   static const String iconsFruitsAppIcon = 'assets/icons/fruits_app_icon.png';
-  static const String images2g9aivNDMxq2VjIoppWWAdWqn89 = 'assets/images/2g9aivNDMxq2VjIoppWWAdWqn89 1.svg';
+  static const String images2g9aivNDMxq2VjIoppWWAdWqn89 = 'assets/images/2g9aivNDMxq2VjIoppWWAdWqn89.svg';
   static const String imagesFreepikCirclesInject5 = 'assets/images/freepik--Circles--inject-5.svg';
   static const String imagesFreepikPlantInject63 = 'assets/images/freepik--Plant--inject-63.svg';
+  static const String  basketAmico = 'assets/images/fruit basket-amico.svg';
+  static const String imagesPineappleCuate = 'assets/images/pineapple-cuate.svg';
+  static const String imagesVector = 'assets/images/Vector.svg';
+  static const String imagesVector2 = 'assets/images/Vector2.svg';
 
 }

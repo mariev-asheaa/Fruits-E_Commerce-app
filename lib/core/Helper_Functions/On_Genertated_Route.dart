@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fruits_e_commerce_app/Features/Auth/presentation/views/LogIn_View.dart';
 import 'package:fruits_e_commerce_app/Features/OnBoarding/presentation/views/OnBoarding_View.dart';
 import 'package:fruits_e_commerce_app/Features/Splash/presentation/views/Splash_View.dart';
 
@@ -12,6 +13,9 @@ Route<dynamic>onGeneratedRoute(RouteSettings settings)
 
     case OnboardingView.routeName:
       return MaterialPageRoute(builder: (context)=>OnboardingView());
+
+    case LoginView.routeName:
+      return MaterialPageRoute(builder: (context)=>LoginView());
 
     default:
       return MaterialPageRoute(builder: (context)=>Scaffold());
