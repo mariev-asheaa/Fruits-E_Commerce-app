@@ -2,11 +2,19 @@
 class Assets {
   Assets._();
 
+  static const String fontsCairoBold = 'assets/Fonts/Cairo-Bold.ttf';
+  static const String fontsCairoMedium = 'assets/Fonts/Cairo-Medium.ttf';
+  static const String fontsCairoRegular = 'assets/Fonts/Cairo-Regular.ttf';
+  static const String fontsCairoSemiBold = 'assets/Fonts/Cairo-SemiBold.ttf';
+  static const String iconsApple = 'assets/icons/apple.svg';
+  static const String iconsCheck = 'assets/icons/Check.svg';
+  static const String iconsFacebook = 'assets/icons/facebook.svg';
   static const String iconsFruitsAppIcon = 'assets/icons/fruits_app_icon.png';
+  static const String iconsGoogle = 'assets/icons/google.svg';
   static const String images2g9aivNDMxq2VjIoppWWAdWqn89 = 'assets/images/2g9aivNDMxq2VjIoppWWAdWqn89.svg';
   static const String imagesFreepikCirclesInject5 = 'assets/images/freepik--Circles--inject-5.svg';
   static const String imagesFreepikPlantInject63 = 'assets/images/freepik--Plant--inject-63.svg';
-  static const String  basketAmico = 'assets/images/fruit basket-amico.svg';
+  static const String imagesFruitbasket = 'assets/images/fruitbasket.svg';
   static const String imagesPineappleCuate = 'assets/images/pineapple-cuate.svg';
   static const String imagesVector = 'assets/images/Vector.svg';
   static const String imagesVector2 = 'assets/images/Vector2.svg';

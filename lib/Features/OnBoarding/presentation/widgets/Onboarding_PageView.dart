@@ -16,7 +16,7 @@ final PageController pageController;
           isVisible: true,
           pageViewModel: PageViewModel(
             backGroundImange: Assets.imagesVector,
-            image: Assets.basketAmico,
+            image: Assets.imagesFruitbasket,
             subTitle: 'اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.',
             title: Text.rich(
               TextSpan(

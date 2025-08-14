@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "284059994649",
+    "project_id": "fruits-hub-bccca",
+    "storage_bucket": "fruits-hub-bccca.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284059994649:android:398a58d80a6d2007ad3888",
+        "android_client_info": {
+          "package_name": "com.example.fruits_e_commerce_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkS2LF4eTVLS3ewcQDbI3GDbvWRUH-GkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

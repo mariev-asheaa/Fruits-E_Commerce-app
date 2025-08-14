@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/presentation/views/LogIn_View.dart';
 import 'package:fruits_e_commerce_app/Features/OnBoarding/presentation/widgets/Onboarding_PageView.dart';
 import 'package:fruits_e_commerce_app/core/Services/Shared_Preferences_Singleton.dart';
-import 'package:fruits_e_commerce_app/core/utils/App_Colors.dart';
 import 'package:fruits_e_commerce_app/core/utils/Custom_Button.dart';
 import 'package:fruits_e_commerce_app/core/utils/constants.dart';
 
@@ -41,8 +40,8 @@ class _OnboardingBodyState extends State<OnboardingBody> {
         DotsIndicator(
             dotsCount: 2,
         decorator: DotsDecorator(
-          activeColor: AppColors.primaryColor,
-          color:currentPageIndex==1?AppColors.primaryColor:AppColors.secondaryColor
+          activeColor: kPrimaryColor,
+          color:currentPageIndex==1?kPrimaryColor:kSecondaryColor
         ),
         ),
         SizedBox(height: 29,),
@@ -54,12 +53,11 @@ class _OnboardingBodyState extends State<OnboardingBody> {
           visible: currentPageIndex==1?true:false,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kHorizintalPadding),
-            child:InkWell(
-                onTap: (){
-                  Prefs.setBool(kIsOnboardingSeen, true);
-                  Navigator.pushReplacementNamed(context, LoginView.routeName);
-                },
-                child: CustomButton(text:'ابدأ الان')),
+            child:CustomButton(text:'ابدأ الان',
+              onTap: () {
+              Prefs.setBool(kIsOnboardingSeen, true);
+              Navigator.pushReplacementNamed(context, LoginView.routeName);
+            },),
           ),
         ),
         SizedBox(height: 43,),
