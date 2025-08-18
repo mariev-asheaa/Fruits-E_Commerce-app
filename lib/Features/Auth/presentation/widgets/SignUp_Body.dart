@@ -53,7 +53,8 @@ class _SignupBodyState extends State<SignupBody> {
                       email=value!;
                     }, isSuffixVisible: false,
                   ),
-                  CustomTextFormField(hinttext: 'كلمة المرور',
+                  CustomTextFormField(
+                    hinttext: 'كلمة المرور',
                       obsecure: true,
                     onSaved: (value){
                       password=value!;

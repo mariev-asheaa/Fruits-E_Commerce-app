@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruits_e_commerce_app/Features/Auth/presentation/cubits/log_in_cubit.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/presentation/views/SignUp_View.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/presentation/widgets/Social_Media_Button.dart';
 import 'package:fruits_e_commerce_app/core/utils/Text_Styles.dart';
@@ -65,9 +67,16 @@ class SocialMediaAccounts extends StatelessWidget {
             ],
           ),
         ),
-        SocialMediaButton(text: 'تسجيل بواسطة جوجل', image: Assets.iconsGoogle,),
-        SocialMediaButton(text: 'تسجيل بواسطة أبل', image: Assets.iconsApple,),
-        SocialMediaButton(text: 'تسجيل بواسطة فيسبوك', image: Assets.iconsFacebook,),
+        SocialMediaButton(text: 'تسجيل بواسطة جوجل', image: Assets.iconsGoogle,
+          onTap: () {
+          context.read<LogInCubit>().googleSignIn();
+          },),
+        SocialMediaButton(text: 'تسجيل بواسطة أبل', image: Assets.iconsApple, onTap: () {  },),
+
+        SocialMediaButton(text: 'تسجيل بواسطة فيسبوك', image: Assets.iconsFacebook,
+          onTap: () {
+          context.read<LogInCubit>().facebookSignIn();
+        },),
       ],
     );
   }

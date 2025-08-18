@@ -16,5 +16,4 @@ result.fold(
         (userEntity)=>emit(SignUpSuccess(userEntity: userEntity))
           );
   }
-
 }
