@@ -4,4 +4,9 @@ import 'package:fruits_e_commerce_app/core/errors/Failures.dart';
 
 abstract class AuthRepo{
   Future<Either<Failure,UserEntity>>createUserWithEmailAndPassword(String email,String password,String name);
+  Future<Either<Failure,UserEntity>>logInWithEmailAndPassword(String email,String password);
+  Future<Either<Failure,UserEntity>>signInWithGoogle();
+  Future<Either<Failure,UserEntity>>signInWithFacebook();
+
+  Future addUserData({required UserEntity user});
 }
