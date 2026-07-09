@@ -59,7 +59,6 @@ class AuthRepoImplementation extends AuthRepo{
       return right(UserModel.fromFirebaseUser(user));
     }
     catch (e) {
-      print(e.toString());
       return left(ServerFailure(errorMessage: 'لقد حدث خطأ ما. الرجاء المحاولة مرة اخرى.'));
     }
   }
@@ -67,6 +66,17 @@ class AuthRepoImplementation extends AuthRepo{
   @override
   Future addUserData({required UserEntity user}) async {
    await  databaseService.addData(path: BackendEndpoints.addUserData, data: user.toMap());
+  }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithApple() async{
+    try {
+      var user= await firebaseAuthService.signInWithApple();
+      return right(UserModel.fromFirebaseUser(user));
+    }
+    catch (e) {
+      return left(ServerFailure(errorMessage: 'لقد حدث خطأ ما. الرجاء المحاولة مرة اخرى.'));
+    }
   }
 
 }

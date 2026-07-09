@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:fruits_e_commerce_app/Features/Splash/presentation/views/Splash_View.dart';
 import 'package:fruits_e_commerce_app/core/Helper_Functions/On_Genertated_Route.dart';
 import 'package:fruits_e_commerce_app/core/Services/Get_It_Service.dart';
@@ -25,7 +26,12 @@ class FruitsHub extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  ScreenUtilPlusInit(
+        designSize: const Size(360, 690),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        autoRebuild: false, builder: (context, child) {
+        return MaterialApp(
       theme: ThemeData(
         fontFamily: 'Cairo',
         scaffoldBackgroundColor: Colors.white,
@@ -43,6 +49,8 @@ class FruitsHub extends StatelessWidget {
      home: SplashView(),
       onGenerateRoute: onGeneratedRoute,
       initialRoute: SplashView.routeName,
+    );
+        }
     );
   }
 }

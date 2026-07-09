@@ -71,7 +71,9 @@ class SocialMediaAccounts extends StatelessWidget {
           onTap: () {
           context.read<LogInCubit>().googleSignIn();
           },),
-        SocialMediaButton(text: 'تسجيل بواسطة أبل', image: Assets.iconsApple, onTap: () {  },),
+        SocialMediaButton(text: 'تسجيل بواسطة أبل', image: Assets.iconsApple, onTap: () {
+          context.read<LogInCubit>().appleSignIn();
+        },),
 
         SocialMediaButton(text: 'تسجيل بواسطة فيسبوك', image: Assets.iconsFacebook,
           onTap: () {
