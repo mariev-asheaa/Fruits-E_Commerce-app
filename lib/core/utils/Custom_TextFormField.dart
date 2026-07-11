@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fruits_e_commerce_app/core/utils/constants.dart';
+
+import 'app_colors.dart';
 
 class CustomTextFormField extends StatefulWidget {
 
@@ -32,7 +32,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
 
         onChanged: widget.onchanged,
         decoration: InputDecoration(
-            fillColor: kTextFieldColor,
+            fillColor: AppColors.kTextFieldColor,
             filled: true,
             suffixIcon: Visibility(
               visible:widget.isSuffixVisible,

@@ -18,5 +18,10 @@ class Assets {
   static const String imagesPineappleCuate = 'assets/images/pineapple-cuate.svg';
   static const String imagesVector = 'assets/images/Vector.svg';
   static const String imagesVector2 = 'assets/images/Vector2.svg';
-
+  static const String notification = 'assets/images/notification.svg';
+  static const String profileImage = 'assets/images/profile_image.png';
+  static const String searchIcon = 'assets/images/search_icon.svg';
+  static const String filter = 'assets/images/filter.svg';
+  static const String imagesPageViewItem2Image = 'assets/images/page_view_item2_image.svg';
+  static const String imagesFeaturedItemBackground = 'assets/images/featured_item_background.svg';
 }

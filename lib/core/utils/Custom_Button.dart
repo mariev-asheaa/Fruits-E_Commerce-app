@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_e_commerce_app/core/utils/Text_Styles.dart';
+import 'package:fruits_e_commerce_app/core/utils/app_colors.dart';
 import 'package:fruits_e_commerce_app/core/utils/constants.dart';
 
 class CustomButton extends StatelessWidget {
@@ -16,7 +17,7 @@ final String text;
         height: 54,
         padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 15),
         decoration: ShapeDecoration(
-          color:kPrimaryColor,
+          color:AppColors.primaryColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
