@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'dart:io';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -71,9 +71,9 @@ class SocialMediaAccounts extends StatelessWidget {
           onTap: () {
           context.read<LogInCubit>().googleSignIn();
           },),
-        SocialMediaButton(text: 'تسجيل بواسطة أبل', image: Assets.iconsApple, onTap: () {
+       Platform.isIOS? SocialMediaButton(text: 'تسجيل بواسطة أبل', image: Assets.iconsApple, onTap: () {
           context.read<LogInCubit>().appleSignIn();
-        },),
+        },):SizedBox(),
 
         SocialMediaButton(text: 'تسجيل بواسطة فيسبوك', image: Assets.iconsFacebook,
           onTap: () {
