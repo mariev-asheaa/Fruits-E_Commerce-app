@@ -4,6 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_e_commerce_app/core/utils/constants.dart';
 import 'package:fruits_e_commerce_app/generated/assets.dart';
 
+import '../../../../core/utils/app_colors.dart';
+
 class CustomCheckbox extends StatelessWidget {
   const CustomCheckbox({super.key, required this.isChecked, required this.onChanged});
 final bool isChecked;
@@ -20,7 +22,7 @@ final ValueChanged<bool>onChanged;
         height: 24,
         clipBehavior: Clip.antiAlias,
         decoration: ShapeDecoration(
-          color:isChecked? kPrimaryColor:Colors.white ,
+          color:isChecked? AppColors.primaryColor:Colors.white ,
           shape: RoundedRectangleBorder(
             side: BorderSide(
               width: 1.50,

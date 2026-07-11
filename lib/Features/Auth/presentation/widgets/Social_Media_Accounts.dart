@@ -6,8 +6,8 @@ import 'package:fruits_e_commerce_app/Features/Auth/presentation/cubits/log_in_c
 import 'package:fruits_e_commerce_app/Features/Auth/presentation/views/SignUp_View.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/presentation/widgets/Social_Media_Button.dart';
 import 'package:fruits_e_commerce_app/core/utils/Text_Styles.dart';
-import 'package:fruits_e_commerce_app/core/utils/constants.dart';
 import 'package:fruits_e_commerce_app/generated/assets.dart';
+import '../../../../core/utils/app_colors.dart';
 
 class SocialMediaAccounts extends StatelessWidget {
   const SocialMediaAccounts({super.key});
@@ -31,7 +31,7 @@ class SocialMediaAccounts extends StatelessWidget {
                 ),
                 TextSpan(
                   text: 'قم بانشاء حساب',
-                  style:Styles.semiBoldW60016.copyWith(color:kPrimaryColor,),
+                  style:Styles.semiBoldW60016.copyWith(color:AppColors.primaryColor,),
                   recognizer: TapGestureRecognizer()..onTap=(){
                     Navigator.pushNamed(context, SignupView.routeName);
                   }

@@ -11,6 +11,8 @@ import 'package:fruits_e_commerce_app/core/utils/Custom_TextFormField.dart';
 import 'package:fruits_e_commerce_app/core/utils/Text_Styles.dart';
 import 'package:fruits_e_commerce_app/core/utils/constants.dart';
 
+import '../../../../core/utils/app_colors.dart';
+
 class SignupBody extends StatefulWidget {
   const SignupBody({super.key});
 
@@ -91,7 +93,7 @@ class _SignupBodyState extends State<SignupBody> {
                             ),
                             TextSpan(
                                 text: 'تسجيل دخول',
-                                style:  Styles.semiBoldW60016.copyWith(color: kPrimaryColor),
+                                style:  Styles.semiBoldW60016.copyWith(color: AppColors.primaryColor),
                                 recognizer: TapGestureRecognizer()..onTap=(){
                                   Navigator.pop(context);
                                 }

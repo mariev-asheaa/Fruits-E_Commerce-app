@@ -9,6 +9,7 @@ import 'package:fruits_e_commerce_app/core/utils/Auth_Header.dart';
 import 'package:fruits_e_commerce_app/core/utils/Custom_Button.dart';
 import 'package:fruits_e_commerce_app/core/utils/Custom_TextFormField.dart';
 import 'package:fruits_e_commerce_app/core/utils/Text_Styles.dart';
+import 'package:fruits_e_commerce_app/core/utils/app_colors.dart';
 import 'package:fruits_e_commerce_app/core/utils/constants.dart';
 
 class LoginBody extends StatefulWidget {
@@ -59,7 +60,7 @@ class _LoginBodyState extends State<LoginBody> {
                children: [
                  Text(
                    'نسيت كلمة المرور؟',
-                   style: Styles.semiBoldW60013.copyWith(color: kSecondaryColor)
+                   style: Styles.semiBoldW60013.copyWith(color: AppColors.secondaryColor)
                  ),
                ],
              ),
