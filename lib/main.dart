@@ -10,6 +10,8 @@ import 'package:fruits_e_commerce_app/core/utils/constants.dart';
 import 'package:fruits_e_commerce_app/firebase_options.dart';
 import 'package:fruits_e_commerce_app/generated/l10n.dart';
 
+import 'core/utils/app_colors.dart';
+
 
  void main() async {
    WidgetsFlutterBinding.ensureInitialized();
@@ -35,7 +37,7 @@ class FruitsHub extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Cairo',
         scaffoldBackgroundColor: Colors.white,
-        colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor)
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor)
       ),
       localizationsDelegates: [
         S.delegate,

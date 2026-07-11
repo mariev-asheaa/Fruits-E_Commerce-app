@@ -7,6 +7,8 @@ import 'package:fruits_e_commerce_app/core/Services/Shared_Preferences_Singleton
 import 'package:fruits_e_commerce_app/core/utils/Custom_Button.dart';
 import 'package:fruits_e_commerce_app/core/utils/constants.dart';
 
+import '../../../../core/utils/app_colors.dart';
+
 class OnboardingBody extends StatefulWidget {
   const OnboardingBody({super.key});
 
@@ -40,8 +42,8 @@ class _OnboardingBodyState extends State<OnboardingBody> {
         DotsIndicator(
             dotsCount: 2,
         decorator: DotsDecorator(
-          activeColor: kPrimaryColor,
-          color:currentPageIndex==1?kPrimaryColor:kSecondaryColor
+          activeColor: AppColors.primaryColor,
+          color:currentPageIndex==1?AppColors.primaryColor:AppColors.secondaryColor,
         ),
         ),
         SizedBox(height: 29,),
