@@ -28,7 +28,7 @@ class _SignupBodyState extends State<SignupBody> {
     return BlocConsumer<SignUpCubit, SignUpState>(
       listener: (context, state) {
         if (state is SignUpSuccess) {
-         // Navigator.pushNamed(context, MainView.routeName);
+        Navigator.pop(context);
         }
         if (state is SignUpFailure) {
           showBar(context, state.errorMessage);

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/presentation/cubits/log_in_cubit.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/presentation/widgets/Social_Media_Accounts.dart';
+import 'package:fruits_e_commerce_app/Features/home/presentation/views/home_view.dart';
 import 'package:fruits_e_commerce_app/core/Helper_Functions/Error_Bar.dart';
 import 'package:fruits_e_commerce_app/core/utils/Auth_Header.dart';
 import 'package:fruits_e_commerce_app/core/utils/Custom_Button.dart';
@@ -26,7 +27,7 @@ class _LoginBodyState extends State<LoginBody> {
     return BlocConsumer<LogInCubit, LogInState>(
   listener: (context, state) {
     if (state is LogInSuccess) {
-      // Navigator.pushNamed(context, MainView.routeName);
+      Navigator.pushNamed(context, HomeView.routeName);
     }
     if (state is LogInFailure) {
       showBar(context, state.errorMessage);

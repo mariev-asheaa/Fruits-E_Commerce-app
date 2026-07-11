@@ -5,6 +5,8 @@ import 'package:fruits_e_commerce_app/Features/Auth/presentation/views/SignUp_Vi
 import 'package:fruits_e_commerce_app/Features/OnBoarding/presentation/views/OnBoarding_View.dart';
 import 'package:fruits_e_commerce_app/Features/Splash/presentation/views/Splash_View.dart';
 
+import '../../Features/home/presentation/views/home_view.dart';
+
 Route<dynamic>onGeneratedRoute(RouteSettings settings)
 {
   switch(settings.name)
@@ -20,6 +22,9 @@ Route<dynamic>onGeneratedRoute(RouteSettings settings)
 
     case SignupView.routeName:
       return MaterialPageRoute(builder: (context)=>SignupView());
+
+    case HomeView.routeName:
+      return MaterialPageRoute(builder: (context)=>HomeView());
 
     default:
       return MaterialPageRoute(builder: (context)=>Scaffold());
