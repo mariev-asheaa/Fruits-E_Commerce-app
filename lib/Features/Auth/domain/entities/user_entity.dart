@@ -3,11 +3,11 @@ class UserEntity{
 
   UserEntity({required this.email,required this.name,required this.uid});
 
-  toMap(){
+  toJson(){
  return{
    'name':name,
    'email':email,
-   'uid':uid,
+   'uId':uid,
  };
   }
 
