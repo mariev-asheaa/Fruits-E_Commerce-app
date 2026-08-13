@@ -33,7 +33,7 @@ final ValueChanged<bool>onChanged;
         ),
         child:isChecked? Padding(
           padding: const EdgeInsets.all(4),
-          child: SvgPicture.asset(Assets.iconsCheck),
+          child: SvgPicture.asset(Assets.icons.check.path),
         ):SizedBox(),
       ),
     );

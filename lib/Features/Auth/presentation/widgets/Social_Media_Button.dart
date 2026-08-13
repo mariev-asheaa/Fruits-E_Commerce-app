@@ -37,7 +37,7 @@ class SocialMediaButton extends StatelessWidget {
                 child: Text(
                   text,
                   textAlign: TextAlign.center,
-                  style:Styles.semiBoldW60016
+                  style:Styles.semiBold16
                 ),
               )
             ],

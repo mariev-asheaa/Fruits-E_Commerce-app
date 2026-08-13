@@ -60,7 +60,7 @@ class _LoginBodyState extends State<LoginBody> {
                children: [
                  Text(
                    'نسيت كلمة المرور؟',
-                   style: Styles.semiBoldW60013.copyWith(color: AppColors.secondaryColor)
+                   style: Styles.semiBold13.copyWith(color: AppColors.secondaryColor)
                  ),
                ],
              ),
@@ -70,6 +70,7 @@ class _LoginBodyState extends State<LoginBody> {
                  if(key.currentState!.validate()){
                    key.currentState!.save();
                      context.read<LogInCubit>().userLogInWithEmailAndPassword(email, password);
+
                  }else{
                    setState(() {
                      autovalidateMode=AutovalidateMode.always;

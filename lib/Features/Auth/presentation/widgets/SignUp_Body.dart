@@ -89,11 +89,11 @@ class _SignupBodyState extends State<SignupBody> {
                           children: [
                             TextSpan(
                                 text: 'تمتلك حساب بالفعل؟ ',
-                                style: Styles.semiBoldW60016.copyWith(color: Color(0xFF949D9E))
+                                style: Styles.semiBold16.copyWith(color: Color(0xFF949D9E))
                             ),
                             TextSpan(
                                 text: 'تسجيل دخول',
-                                style:  Styles.semiBoldW60016.copyWith(color: AppColors.primaryColor),
+                                style:  Styles.semiBold16.copyWith(color: AppColors.primaryColor),
                                 recognizer: TapGestureRecognizer()..onTap=(){
                                   Navigator.pop(context);
                                 }

@@ -24,14 +24,14 @@ class SocialMediaAccounts extends StatelessWidget {
               children: [
                 TextSpan(
                   text: 'لا تمتلك حساب؟',
-                  style:Styles.semiBoldW60016.copyWith(color:  Color(0xFF949D9E),)
+                  style:Styles.semiBold16.copyWith(color:  Color(0xFF949D9E),)
                 ),
                 TextSpan(
                   text: ' ',
                 ),
                 TextSpan(
                   text: 'قم بانشاء حساب',
-                  style:Styles.semiBoldW60016.copyWith(color:AppColors.primaryColor,),
+                  style:Styles.semiBold16.copyWith(color:AppColors.primaryColor,),
                   recognizer: TapGestureRecognizer()..onTap=(){
                     Navigator.pushNamed(context, SignupView.routeName);
                   }
@@ -55,7 +55,7 @@ class SocialMediaAccounts extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 8),
                 child: Text(
                   'أو',
-                  style:Styles.semiBoldW60016.copyWith(color:Color(0xFF949D9E),)
+                  style:Styles.semiBold16.copyWith(color:Color(0xFF949D9E),)
                 ),
               ),
               Expanded(
@@ -67,15 +67,15 @@ class SocialMediaAccounts extends StatelessWidget {
             ],
           ),
         ),
-        SocialMediaButton(text: 'تسجيل بواسطة جوجل', image: Assets.iconsGoogle,
+        SocialMediaButton(text: 'تسجيل بواسطة جوجل', image: Assets.icons.google.path,
           onTap: () {
           context.read<LogInCubit>().googleSignIn();
           },),
-       Platform.isIOS? SocialMediaButton(text: 'تسجيل بواسطة أبل', image: Assets.iconsApple, onTap: () {
+       Platform.isIOS? SocialMediaButton(text: 'تسجيل بواسطة أبل', image: Assets.icons.apple.path, onTap: () {
           context.read<LogInCubit>().appleSignIn();
         },):SizedBox(),
 
-        SocialMediaButton(text: 'تسجيل بواسطة فيسبوك', image: Assets.iconsFacebook,
+        SocialMediaButton(text: 'تسجيل بواسطة فيسبوك', image: Assets.icons.facebook.path,
           onTap: () {
           context.read<LogInCubit>().facebookSignIn();
         },),
