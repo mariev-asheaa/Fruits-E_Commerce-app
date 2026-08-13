@@ -26,14 +26,14 @@ class SearchTextField extends StatelessWidget {
           prefixIcon: SizedBox(
             width: 20,
             child: Center(
-              child: SvgPicture.asset(Assets.searchIcon),
+              child: SvgPicture.asset(Assets.images.searchIcon.path),
             ),
           ),
           suffixIcon: SizedBox(
             width: 20,
             child: Center(
               child: SvgPicture.asset(
-                Assets.filter,
+                Assets.images.filter.path,
               ),
             ),
           ),

@@ -2,19 +2,20 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 
 abstract class Styles
 {
-  static const TextStyle bold13 = TextStyle(
+  static  TextStyle bold13 = TextStyle(
     fontWeight: FontWeight.bold,
-    fontSize: 13,
+    fontSize: 13.sp,
   );
-  static const TextStyle bold23 = TextStyle(
+  static  TextStyle bold23 = TextStyle(
     fontWeight: FontWeight.bold,
-    fontSize: 23,
+    fontSize: 23.sp,
   );
 
-  static const TextStyle semiBoldW60013 = TextStyle(
+  static const TextStyle semiBold13 = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 13,
   );
@@ -34,8 +35,7 @@ abstract class Styles
     fontSize: 19,
   );
 
-
-  static const TextStyle semiBoldW60016 = TextStyle(
+  static const TextStyle semiBold16 = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 16,
   );
@@ -50,12 +50,12 @@ abstract class Styles
     fontSize: 22,
   );
 
-  static const TextStyle semiBoldW60011 = TextStyle(
+  static const TextStyle semiBold11 = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 11,
   );
 
-  static const TextStyle mediumW50015 = TextStyle(
+  static const TextStyle medium15 = TextStyle(
     fontWeight: FontWeight.w500,
     fontSize: 15,
   );

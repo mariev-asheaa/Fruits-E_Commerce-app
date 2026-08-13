@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_e_commerce_app/core/utils/Text_Styles.dart';
 import 'package:fruits_e_commerce_app/core/utils/app_colors.dart';
-import 'package:fruits_e_commerce_app/core/utils/constants.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, required this.text,required this.onTap});
@@ -31,7 +29,7 @@ final String text;
           Text(
           text,
           textAlign: TextAlign.center,
-          style: Styles.semiBoldW60016.copyWith(color: Colors.white),
+          style: Styles.semiBold16.copyWith(color: Colors.white),
           )
           ],
         ),
