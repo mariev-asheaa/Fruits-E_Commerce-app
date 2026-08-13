@@ -1,4 +1,3 @@
-import 'package:fruits_e_commerce_app/Features/Auth/domain/entities/user_entity.dart';
 
 abstract class DatabaseService{
   Future<void>addData({required String path,required Map<String,dynamic>data,String?documentId});
