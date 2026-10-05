@@ -20,6 +20,7 @@ class $AssetsImagesGen {
   final SvgGenImage featuredItemBackground =
       const SvgGenImage('assets/images/featured_item_background.svg');
   final SvgGenImage filter = const SvgGenImage('assets/images/filter.svg');
+  final SvgGenImage filter2 = const SvgGenImage('assets/images/filter2.svg');
   final SvgGenImage freepikCirclesInject5 =
       const SvgGenImage('assets/images/freepik--Circles--inject-5.svg');
   final SvgGenImage freepikPlantInject63 =
@@ -48,16 +49,18 @@ class $AssetsIconsGen {
       const AssetGenImage('assets/icons/fruits_app_icon.png');
   final SvgGenImage google = const SvgGenImage('assets/icons/google.svg');
   final SvgGenImage home = const SvgGenImage('assets/icons/home.svg');
-  final SvgGenImage home1 = const SvgGenImage('assets/icons/home_outline.svg');
+  final SvgGenImage homeOutline =
+      const SvgGenImage('assets/icons/home_outline.svg');
   final SvgGenImage products = const SvgGenImage('assets/icons/products.svg');
-  final SvgGenImage products1 =
+  final SvgGenImage productsOutline =
       const SvgGenImage('assets/icons/products_outline.svg');
   final SvgGenImage shoppingCart =
       const SvgGenImage('assets/icons/shopping-cart.svg');
-  final SvgGenImage shoppingCart1 =
+  final SvgGenImage shoppingCartOutline =
       const SvgGenImage('assets/icons/shopping-cart_outline.svg');
   final SvgGenImage user = const SvgGenImage('assets/icons/user.svg');
-  final SvgGenImage user1 = const SvgGenImage('assets/icons/user_outline.svg');
+  final SvgGenImage userOutline =
+      const SvgGenImage('assets/icons/user_outline.svg');
 }
 
 class AssetGenImage {
