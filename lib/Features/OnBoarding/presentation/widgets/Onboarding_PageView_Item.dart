@@ -4,7 +4,7 @@ import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/presentation/views/LogIn_View.dart';
 import 'package:fruits_e_commerce_app/Features/OnBoarding/models/PageView_Item_Model.dart';
-import 'package:fruits_e_commerce_app/core/Services/Shared_Preferences_Singleton.dart';
+import 'package:fruits_e_commerce_app/core/Services/shared_preferences_singleton.dart';
 import 'package:fruits_e_commerce_app/core/utils/constants.dart';
 
 

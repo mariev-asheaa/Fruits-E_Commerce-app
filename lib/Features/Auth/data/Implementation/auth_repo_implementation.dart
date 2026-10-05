@@ -5,13 +5,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/data/models/user_model.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/domain/entities/user_entity.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/domain/repos/auth_repo.dart';
-import 'package:fruits_e_commerce_app/core/Services/Database_Service.dart';
-import 'package:fruits_e_commerce_app/core/Services/Firebase_Auth_Service.dart';
+import 'package:fruits_e_commerce_app/core/Services/database_service.dart';
+import 'package:fruits_e_commerce_app/core/Services/firebase_auth_service.dart';
 import 'package:fruits_e_commerce_app/core/errors/Exceptions.dart';
 import 'package:fruits_e_commerce_app/core/errors/Failures.dart';
 import 'package:fruits_e_commerce_app/core/utils/Backend_Endpoints.dart';
 
-import '../../../../core/Services/Shared_Preferences_Singleton.dart';
+import '../../../../core/Services/shared_preferences_singleton.dart';
 import '../../../../core/utils/constants.dart';
 
 class AuthRepoImplementation extends AuthRepo{

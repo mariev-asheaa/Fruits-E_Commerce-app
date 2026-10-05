@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/presentation/views/LogIn_View.dart';
 import 'package:fruits_e_commerce_app/Features/OnBoarding/presentation/widgets/Onboarding_PageView.dart';
-import 'package:fruits_e_commerce_app/core/Services/Shared_Preferences_Singleton.dart';
+import 'package:fruits_e_commerce_app/core/Services/shared_preferences_singleton.dart';
 import 'package:fruits_e_commerce_app/core/utils/Custom_Button.dart';
 import 'package:fruits_e_commerce_app/core/utils/constants.dart';
 
