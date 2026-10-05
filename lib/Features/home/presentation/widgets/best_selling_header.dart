@@ -9,7 +9,7 @@ class BestSellingHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-     // onTap: () => Navigator.pushNamed(context, BestSellingView.routeName),
+   onTap: () => Navigator.pushNamed(context, BestSellingView.routeName),
       child: Row(
         children: [
           const Text(

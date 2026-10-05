@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_e_commerce_app/Features/home/presentation/widgets/products_grid_view_bloc_builder.dart';
 
+import '../../../../core/cubits/products_cubit/products_cubit.dart';
 import '../../../../core/utils/constants.dart';
 import '../../../../core/utils/search_text_field.dart';
 import 'best_selling_header.dart';
@@ -20,7 +22,7 @@ class HomeViewBody extends StatefulWidget {
 class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   void initState() {
-   // context.read<ProductsCubit>().getBestSellingroducts();
+   context.read<ProductsCubit>().getBestSellingProducts();
     super.initState();
   }
 
@@ -55,7 +57,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
               ],
             ),
           ),
-         //ProductsGridViewBlocBuilder()
+        ProductsGridViewBlocBuilder()
         ],
       ),
     );
