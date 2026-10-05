@@ -1,12 +1,10 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/presentation/views/LogIn_View.dart';
 import 'package:fruits_e_commerce_app/Features/OnBoarding/presentation/views/OnBoarding_View.dart';
-import 'package:fruits_e_commerce_app/Features/home/presentation/views/home_view.dart';
-import 'package:fruits_e_commerce_app/core/Services/Firebase_Auth_Service.dart';
-import 'package:fruits_e_commerce_app/core/Services/Firestore_Service.dart';
-import 'package:fruits_e_commerce_app/core/Services/Shared_Preferences_Singleton.dart';
+import 'package:fruits_e_commerce_app/Features/home/presentation/views/main_view.dart';
+import 'package:fruits_e_commerce_app/core/Services/firebase_auth_service.dart';
+import 'package:fruits_e_commerce_app/core/Services/shared_preferences_singleton.dart';
 import 'package:fruits_e_commerce_app/core/utils/constants.dart';
 import 'package:fruits_e_commerce_app/generated/assets.dart';
 
@@ -48,7 +46,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       {
         var isLoggedIn=FirebaseAuthService().isLoggedIn();
         if(isLoggedIn){
-          Navigator.pushReplacementNamed(context, HomeView.routeName);
+          Navigator.pushReplacementNamed(context, MainView.routeName);
         }else{
           Navigator.pushReplacementNamed(context, LoginView.routeName);
         }
