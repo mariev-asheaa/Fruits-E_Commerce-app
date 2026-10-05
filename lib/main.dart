@@ -4,9 +4,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:fruits_e_commerce_app/Features/Splash/presentation/views/Splash_View.dart';
 import 'package:fruits_e_commerce_app/core/Helper_Functions/On_Genertated_Route.dart';
-import 'package:fruits_e_commerce_app/core/Services/Get_It_Service.dart';
-import 'package:fruits_e_commerce_app/core/Services/Shared_Preferences_Singleton.dart';
-import 'package:fruits_e_commerce_app/core/utils/constants.dart';
+import 'package:fruits_e_commerce_app/core/Services/get_it_service.dart';
+import 'package:fruits_e_commerce_app/core/Services/shared_preferences_singleton.dart';
 import 'package:fruits_e_commerce_app/firebase_options.dart';
 import 'package:fruits_e_commerce_app/generated/l10n.dart';
 

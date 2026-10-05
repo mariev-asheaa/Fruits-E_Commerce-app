@@ -13,18 +13,18 @@ class BottomNavigationBarEntity {
 List<BottomNavigationBarEntity> get bottomNavigationBarItems => [
   BottomNavigationBarEntity(
       activeImage: Assets.icons.home.path,
-      inActiveImage: Assets.icons.home1.path,
+      inActiveImage: Assets.icons.homeOutline.path,
       name: 'الرئيسية'),
   BottomNavigationBarEntity(
       activeImage: Assets.icons.products.path,
-      inActiveImage: Assets.icons.products1.path,
+      inActiveImage: Assets.icons.productsOutline.path,
       name: 'المنتجات'),
   BottomNavigationBarEntity(
       activeImage: Assets.icons.shoppingCart.path,
-      inActiveImage: Assets.icons.shoppingCart1.path,
+      inActiveImage: Assets.icons.shoppingCartOutline.path,
       name: 'سلة التسوق'),
   BottomNavigationBarEntity(
       activeImage: Assets.icons.user.path,
-      inActiveImage: Assets.icons.user1.path,
+      inActiveImage: Assets.icons.userOutline.path,
       name: 'حسابي'),
 ];

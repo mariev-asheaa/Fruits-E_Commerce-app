@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../views/home_view.dart';
+import '../views/products_view.dart';
 
 
 class MainViewBody extends StatelessWidget {
@@ -17,7 +18,7 @@ class MainViewBody extends StatelessWidget {
       index: currentViewIndex,
       children: const [
         HomeView(),
-        // ProductsView(),
+        ProductsView(),
         // CartView(),
       ],
     );
