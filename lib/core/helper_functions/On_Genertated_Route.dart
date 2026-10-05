@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/presentation/views/LogIn_View.dart';
 import 'package:fruits_e_commerce_app/Features/Auth/presentation/views/SignUp_View.dart';
@@ -6,7 +5,7 @@ import 'package:fruits_e_commerce_app/Features/OnBoarding/presentation/views/OnB
 import 'package:fruits_e_commerce_app/Features/Splash/presentation/views/Splash_View.dart';
 
 import '../../Features/best_selling_fruits/best_selling_view.dart';
-import '../../Features/home/presentation/views/home_view.dart';
+import '../../Features/home/presentation/views/main_view.dart';
 
 Route<dynamic>onGeneratedRoute(RouteSettings settings)
 {
@@ -24,8 +23,8 @@ Route<dynamic>onGeneratedRoute(RouteSettings settings)
     case SignupView.routeName:
       return MaterialPageRoute(builder: (context)=>SignupView());
 
-    case HomeView.routeName:
-      return MaterialPageRoute(builder: (context)=>HomeView());
+    case MainView.routeName:
+      return MaterialPageRoute(builder: (context)=>MainView());
 
     case BestSellingView.routeName:
       return MaterialPageRoute(builder: (context)=>BestSellingView());
