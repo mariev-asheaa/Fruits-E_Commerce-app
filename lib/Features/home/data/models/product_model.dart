@@ -1,8 +1,7 @@
-import 'package:fruits_e_commerce_app/core/models/review_model.dart';
+import 'package:fruits_e_commerce_app/Features/home/data/models/review_model.dart';
 
-import '../Helper_Functions/get_avg_rating.dart';
-import '../entities/product_entity.dart';
-
+import '../../../../core/helper_functions/get_avg_rating.dart';
+import '../../domain/entities/product_entity.dart';
 
 class ProductModel {
   final String name;

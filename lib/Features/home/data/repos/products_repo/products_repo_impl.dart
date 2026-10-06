@@ -1,11 +1,12 @@
 import 'package:dartz/dartz.dart';
+import 'package:fruits_e_commerce_app/Features/home/data/repos/products_repo/products_repo.dart';
 import 'package:fruits_e_commerce_app/core/Services/database_service.dart';
 import 'package:fruits_e_commerce_app/core/errors/Failures.dart';
-import 'package:fruits_e_commerce_app/core/repos/products_repo/products_repo.dart';
 
-import '../../entities/product_entity.dart';
+import '../../../../../core/utils/Backend_Endpoints.dart';
+import '../../../domain/entities/product_entity.dart';
 import '../../models/product_model.dart';
-import '../../utils/Backend_Endpoints.dart';
+
 class ProductsRepoImpl extends ProductsRepo {
   final DatabaseService databaseService;
 
