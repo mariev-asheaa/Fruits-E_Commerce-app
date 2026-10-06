@@ -4,7 +4,7 @@ import 'package:fruits_e_commerce_app/Features/home/presentation/widgets/home_vi
 
 import '../../../../core/Services/Get_It_Service.dart';
 import '../../../../core/cubits/products_cubit/products_cubit.dart';
-import '../../../../core/repos/products_repo/products_repo.dart';
+import '../../data/repos/products_repo/products_repo.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
