@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../entities/product_entity.dart';
+import '../../Features/home/domain/entities/product_entity.dart';
 import '../utils/Text_Styles.dart';
 import '../utils/app_colors.dart';
 import 'custom_network_image.dart';

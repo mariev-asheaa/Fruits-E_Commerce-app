@@ -1,9 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
-import '../../entities/product_entity.dart';
-import '../../repos/products_repo/products_repo.dart';
-
+import '../../../Features/home/data/repos/products_repo/products_repo.dart';
+import '../../../Features/home/domain/entities/product_entity.dart';
 part 'products_state.dart';
 
 class ProductsCubit extends Cubit<ProductsState> {

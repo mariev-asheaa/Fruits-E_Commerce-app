@@ -4,8 +4,9 @@ import 'package:fruits_e_commerce_app/core/Services/database_service.dart';
 import 'package:fruits_e_commerce_app/core/Services/firebase_auth_service.dart';
 import 'package:get_it/get_it.dart';
 
-import '../repos/products_repo/products_repo.dart';
-import '../repos/products_repo/products_repo_impl.dart';
+
+import '../../Features/home/data/repos/products_repo/products_repo.dart';
+import '../../Features/home/data/repos/products_repo/products_repo_impl.dart';
 import '../services/firestore_service.dart';
 
 
