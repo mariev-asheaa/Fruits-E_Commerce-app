@@ -10,6 +10,7 @@ class CustomNetworkImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(imageUrl);
+    const baseUrl='https://nktbjphxchcniwhvojsz.supabase.co/storage/v1/object/public';
+    return Image.network("$baseUrl/$imageUrl");
   }
 }
