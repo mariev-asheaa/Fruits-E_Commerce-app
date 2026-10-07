@@ -43,4 +43,22 @@ class ProductsRepoImpl extends ProductsRepo {
       return left(ServerFailure(errorMessage: 'Failed to get products'));
     }
   }
+
+  @override
+  Future<Either<Failure, List<ProductEntity>>> getFeaturedProducts() async{
+    try {
+      var data = await databaseService.getData(
+          path: BackendEndpoints.getProducts,
+          query: {
+            'where': 'isFeatured',
+            'isEqualTo': true,
+          }) as List<Map<String, dynamic>>;
+
+      List<ProductEntity> products =
+      data.map((e) => ProductModel.fromJson(e).toEntity()).toList();
+      return right(products);
+    } catch (e) {
+      return left(ServerFailure( errorMessage: 'Failed to get products'));
+    }
+  }
 }
