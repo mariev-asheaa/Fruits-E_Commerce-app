@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/utils/Text_Styles.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/widgets/custom_network_image.dart';
-import '../../domain/entities/car_item_entity.dart';
+import '../../domain/entities/cart_item_entity.dart';
 import '../cubits/cart_cubit/cart_cubit.dart';
 import '../cubits/cart_item_cubit/cart_item_cubit.dart';
 import 'cart_item_action_buttons.dart';

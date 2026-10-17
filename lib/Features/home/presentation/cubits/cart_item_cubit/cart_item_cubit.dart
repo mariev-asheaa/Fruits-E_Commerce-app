@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
-import '../../../domain/entities/car_item_entity.dart';
+import '../../../domain/entities/cart_item_entity.dart';
 
 part 'cart_item_state.dart';
 
