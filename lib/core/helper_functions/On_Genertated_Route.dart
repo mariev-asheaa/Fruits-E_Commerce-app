@@ -5,6 +5,8 @@ import 'package:fruits_e_commerce_app/Features/OnBoarding/presentation/views/OnB
 import 'package:fruits_e_commerce_app/Features/Splash/presentation/views/Splash_View.dart';
 
 import '../../Features/best_selling_fruits/best_selling_view.dart';
+import '../../Features/checkout/presentation/checkout_view.dart';
+import '../../Features/home/domain/entities/cart_entity.dart';
 import '../../Features/home/presentation/views/main_view.dart';
 
 Route<dynamic>onGeneratedRoute(RouteSettings settings)
@@ -29,6 +31,8 @@ Route<dynamic>onGeneratedRoute(RouteSettings settings)
     case BestSellingView.routeName:
       return MaterialPageRoute(builder: (context)=>BestSellingView());
 
+    case CheckoutView.routeName:
+      return MaterialPageRoute(builder: (context)=>CheckoutView(cartEntity: settings.arguments as CartEntity,));
     default:
       return MaterialPageRoute(builder: (context)=>Scaffold());
   }
