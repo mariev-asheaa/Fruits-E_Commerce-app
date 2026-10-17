@@ -17,6 +17,7 @@ class $AssetsImagesGen {
       const SvgGenImage('assets/images/2g9aivNDMxq2VjIoppWWAdWqn89.svg');
   final SvgGenImage vector = const SvgGenImage('assets/images/Vector.svg');
   final SvgGenImage vector2 = const SvgGenImage('assets/images/Vector2.svg');
+  final SvgGenImage edit = const SvgGenImage('assets/images/edit.svg');
   final SvgGenImage featuredItemBackground =
       const SvgGenImage('assets/images/featured_item_background.svg');
   final SvgGenImage filter = const SvgGenImage('assets/images/filter.svg');
@@ -27,6 +28,7 @@ class $AssetsImagesGen {
       const SvgGenImage('assets/images/freepik--Plant--inject-63.svg');
   final SvgGenImage fruitbasket =
       const SvgGenImage('assets/images/fruitbasket.svg');
+  final SvgGenImage location = const SvgGenImage('assets/images/location.svg');
   final SvgGenImage notification =
       const SvgGenImage('assets/images/notification.svg');
   final SvgGenImage pageViewItem2Image =
