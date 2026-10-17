@@ -5,6 +5,8 @@ import 'package:fruits_e_commerce_app/core/Services/firebase_auth_service.dart';
 import 'package:get_it/get_it.dart';
 
 
+import '../../Features/checkout/data/repos/orders_repo_impl.dart';
+import '../../Features/checkout/domain/repos/orders_repo.dart';
 import '../../Features/home/data/repos/products_repo/products_repo.dart';
 import '../../Features/home/data/repos/products_repo/products_repo_impl.dart';
 import '../services/firestore_service.dart';
@@ -24,6 +26,12 @@ void setupGetIt() {
   );
   getIt.registerSingleton<ProductsRepo>(
     ProductsRepoImpl(
+      getIt<DatabaseService>(),
+    ),
+  );
+
+  getIt.registerSingleton<OrdersRepo>(
+    OrdersRepoImpl(
       getIt<DatabaseService>(),
     ),
   );
