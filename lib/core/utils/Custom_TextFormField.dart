@@ -1,75 +1,48 @@
 import 'package:flutter/material.dart';
+import 'Text_Styles.dart';
 
-import 'app_colors.dart';
-
-class CustomTextFormField extends StatefulWidget {
-
-  CustomTextFormField({super.key, this.onchanged,this.hinttext,this.obsecure=false,this.onSaved, required this.isSuffixVisible});
-  Function(String)?onchanged;
+class CustomTextFormField extends StatelessWidget {
+  const CustomTextFormField(
+      {super.key, required this.hintText, required this.textInputType, this.suffixIcon, this.onSaved, this.obscureText = false});
+  final String hintText;
+  final TextInputType textInputType;
+  final Widget? suffixIcon;
   final void Function(String?)? onSaved;
-  final String? hinttext;
-  bool ?obsecure;
-final bool isSuffixVisible;
-  @override
-  State<CustomTextFormField> createState() => _CustomTextFormFieldState();
-}
-
-class _CustomTextFormFieldState extends State<CustomTextFormField> {
+  final bool obscureText;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
-      child: TextFormField(
-        keyboardType: TextInputType.visiblePassword,
-        obscureText: widget.obsecure!,
-        onSaved:widget.onSaved,
-        validator:(data){
-          if(data!.isEmpty){
-            return 'This field is required';
-          }
-          return null;
-        } ,
-
-        onChanged: widget.onchanged,
-        decoration: InputDecoration(
-            fillColor: AppColors.kTextFieldColor,
-            filled: true,
-            suffixIcon: Visibility(
-              visible:widget.isSuffixVisible,
-              child: IconButton(
-                icon: Icon(
-                  widget.obsecure! ? Icons.visibility : Icons.visibility_off_outlined,
-                ),
-                onPressed: () {
-                  setState(() {
-                    widget.obsecure= !widget.obsecure!;
-                  });
-                },
-              ),
-            ),
-            hintText: widget.hinttext,
-            suffixIconColor: Color(0xFF949D9E).withValues(alpha: .3),
-            hintStyle: const TextStyle(fontSize: 16,color: Color(0xFF949D9E),fontFamily:'Cairo'),
-
-            enabledBorder:  OutlineInputBorder(
-                borderRadius:BorderRadius.circular(4),
-                borderSide: const BorderSide(
-                  width: 1,
-                  strokeAlign: BorderSide.strokeAlignCenter,
-                  color: Color(0xFFE6E9E9),
-                )
-            ),
-            focusedBorder:  OutlineInputBorder(
-                borderRadius:BorderRadius.circular(4),
-                borderSide: const BorderSide(
-                  width: 1,
-                  strokeAlign: BorderSide.strokeAlignCenter,
-                  color: Color(0xFFE6E9E9),
-                )
-            )
+    return TextFormField(
+      obscureText: obscureText,
+      onSaved: onSaved,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return 'هذا الحقل مطلوب';
+        }
+        return null;
+      },
+      keyboardType: textInputType,
+      decoration: InputDecoration(
+        suffixIcon: suffixIcon,
+        hintStyle: Styles.bold13.copyWith(
+          color: const Color(0xFF949D9E),
         ),
+        hintText: hintText,
+        filled: true,
+        fillColor: const Color(0xFFF9FAFA),
+        border: buildBorder(),
+        enabledBorder: buildBorder(),
+        focusedBorder: buildBorder(),
+      ),
+    );
+  }
+
+  OutlineInputBorder buildBorder() {
+    return OutlineInputBorder(
+      borderRadius: BorderRadius.circular(4),
+      borderSide: const BorderSide(
+        width: 1,
+        color: Color(0xFFE6E9E9),
       ),
     );
   }
 }
-

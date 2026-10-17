@@ -9,7 +9,6 @@ import 'package:fruits_e_commerce_app/core/utils/Auth_Header.dart';
 import 'package:fruits_e_commerce_app/core/utils/Custom_Button.dart';
 import 'package:fruits_e_commerce_app/core/utils/Custom_TextFormField.dart';
 import 'package:fruits_e_commerce_app/core/utils/Text_Styles.dart';
-import 'package:fruits_e_commerce_app/core/utils/constants.dart';
 
 import '../../../../core/utils/app_colors.dart';
 
@@ -45,22 +44,24 @@ class _SignupBodyState extends State<SignupBody> {
               child: Column(
                 children: [
                   AuthHeader(title: 'حساب جديد', visible: true,),
-                  CustomTextFormField(hinttext: 'الاسم كامل',
+                  CustomTextFormField(hintText: 'الاسم كامل',
                     onSaved: (value){
                     userName=value!;
-                  }, isSuffixVisible: false,
+                  },
+                    textInputType: TextInputType.name,
                   ),
-                  CustomTextFormField(hinttext: 'البريد الإلكتروني',
+                  CustomTextFormField(hintText: 'البريد الإلكتروني',
                     onSaved: (value){
                       email=value!;
-                    }, isSuffixVisible: false,
+                    },
+                    textInputType: TextInputType.emailAddress,
                   ),
                   CustomTextFormField(
-                    hinttext: 'كلمة المرور',
-                      obsecure: true,
+                    hintText: 'كلمة المرور',
+                      obscureText: true,
                     onSaved: (value){
                       password=value!;
-                    }, isSuffixVisible: true,
+                    }, textInputType: TextInputType.visiblePassword,
                   ),
                   TermsAndConditions(
                     onChanged: (bool value) {

@@ -47,13 +47,13 @@ class _LoginBodyState extends State<LoginBody> {
                onSaved: (value){
                  email=value!;
                },
-               hinttext: 'البريد الإلكتروني', isSuffixVisible: false
-               ,),
+               hintText: 'البريد الإلكتروني', textInputType: TextInputType.emailAddress,
+               ),
              CustomTextFormField(
                onSaved: (value){
                  password=value!;
                },
-               hinttext: 'كلمة المرور',obsecure: true, isSuffixVisible: true,),
+               hintText: 'كلمة المرور',obscureText: true, textInputType: TextInputType.visiblePassword,),
              Row(
                mainAxisAlignment: MainAxisAlignment.end,
                children: [
