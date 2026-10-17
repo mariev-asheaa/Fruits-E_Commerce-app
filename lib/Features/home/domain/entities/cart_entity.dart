@@ -1,6 +1,6 @@
 
 import 'product_entity.dart';
-import 'car_item_entity.dart';
+import 'cart_item_entity.dart';
 
 class CartEntity {
   final List<CartItemEntity> cartItems;
