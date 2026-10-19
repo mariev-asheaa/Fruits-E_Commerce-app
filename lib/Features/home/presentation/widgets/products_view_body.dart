@@ -47,7 +47,8 @@ class _ProductsViewBodyState extends State<ProductsViewBody> {
                 ),
                 ProductsViewHeader(
                     productsLength:
-                    context.read<ProductsCubit>().productsLength),
+                    context.watch<ProductsCubit>().productsLength
+                ),
                 const SizedBox(
                   height: 8,
                 ),
