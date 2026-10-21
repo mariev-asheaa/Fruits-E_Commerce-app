@@ -18,16 +18,3 @@ final class ProductsSuccess extends ProductsState {
 
   ProductsSuccess(this.products);
 }
-final class FeaturedProductsLoading extends ProductsState {}
-
-final class FeaturedProductsSuccess extends ProductsState {
-  final List<ProductEntity> products;
-
-  FeaturedProductsSuccess(this.products);
-}
-
-final class FeaturedProductsFailure extends ProductsState {
-  final String errorMessage;
-
-  FeaturedProductsFailure(this.errorMessage);
-}

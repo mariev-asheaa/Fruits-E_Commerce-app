@@ -33,14 +33,4 @@ class ProductsCubit extends Cubit<ProductsState> {
       },
     );
   }
-  Future<void> getFeaturedProducts() async {
-    emit(FeaturedProductsLoading());
-    final result = await productsRepo.getFeaturedProducts();
-    result.fold(
-          (failure) => emit(FeaturedProductsFailure(failure.errorMessage)),
-          (products) {
-        emit(FeaturedProductsSuccess(products));
-      },
-    );
-  }
 }
