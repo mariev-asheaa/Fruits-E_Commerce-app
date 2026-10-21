@@ -15,6 +15,8 @@ class $AssetsImagesGen {
 
   final SvgGenImage a2g9aivNDMxq2VjIoppWWAdWqn89 =
       const SvgGenImage('assets/images/2g9aivNDMxq2VjIoppWWAdWqn89.svg');
+  final SvgGenImage group34011 =
+      const SvgGenImage('assets/images/Group 34011.svg');
   final SvgGenImage vector = const SvgGenImage('assets/images/Vector.svg');
   final SvgGenImage vector2 = const SvgGenImage('assets/images/Vector2.svg');
   final SvgGenImage edit = const SvgGenImage('assets/images/edit.svg');
