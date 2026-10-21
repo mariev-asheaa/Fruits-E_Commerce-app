@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:fruits_e_commerce_app/Features/Splash/presentation/views/Splash_View.dart';
@@ -9,6 +10,8 @@ import 'package:fruits_e_commerce_app/core/Services/shared_preferences_singleton
 import 'package:fruits_e_commerce_app/firebase_options.dart';
 import 'package:fruits_e_commerce_app/generated/l10n.dart';
 
+import 'Features/home/presentation/cubits/bottom_nav_cubit.dart';
+import 'Features/home/presentation/cubits/cart_cubit/cart_cubit.dart';
 import 'core/utils/app_colors.dart';
 
 
@@ -19,7 +22,19 @@ import 'core/utils/app_colors.dart';
    );
   await Prefs.init();
    setupGetIt();
-  runApp(const FruitsHub());
+   runApp(
+     MultiBlocProvider(
+       providers: [
+         BlocProvider(
+           create: (context) => BottomNavCubit(),
+         ),
+         BlocProvider(
+           create: (context) => CartCubit(),
+         ),
+       ],
+       child: const FruitsHub(),
+     ),
+   );
 }
 
 class FruitsHub extends StatelessWidget {
