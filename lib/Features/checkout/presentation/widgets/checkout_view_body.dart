@@ -3,9 +3,11 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
+import 'package:fruits_e_commerce_app/Features/checkout/presentation/widgets/success_section.dart';
 import '../../../../core/Helper_Functions/Error_Bar.dart';
 import '../../../../core/utils/Custom_Button.dart';
 import '../../../../core/utils/app_keys.dart';
+import '../../data/models/order_model.dart';
 import '../../domain/entities/order_entity.dart';
 import '../../domain/entities/paypal_payment_entity/paypal_payment_entity.dart';
 import '../cubits/add_order_cubit.dart';
@@ -22,8 +24,7 @@ class CheckoutViewBody extends StatefulWidget {
 
 class _CheckoutViewBodyState extends State<CheckoutViewBody> {
   late PageController pageController;
-  ValueNotifier<AutovalidateMode> valueNotifier =
-  ValueNotifier(AutovalidateMode.disabled);
+  ValueNotifier<AutovalidateMode> valueNotifier = ValueNotifier(AutovalidateMode.disabled);
   @override
   void initState() {
     pageController = PageController();
@@ -137,36 +138,47 @@ class _CheckoutViewBodyState extends State<CheckoutViewBody> {
   }
 
   void _processPayment(BuildContext context) {
-    if(context.read<OrderInputEntity>().payWithCash == true){
-
-    }
     var orderEntity = context.read<OrderInputEntity>();
-    PaypalPaymentEntity paypalPaymentEntity =
-    PaypalPaymentEntity.fromEntity(orderEntity);
-    var addOrderCubit = context.read<AddOrderCubit>();
+    var orderModel= OrderModel.fromEntity(orderEntity);
+    if(context.read<OrderInputEntity>().payWithCash == true){
+      var addOrderCubit = context.read<AddOrderCubit>();
+      addOrderCubit.addOrder(order: orderEntity);
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (BuildContext context) =>SuccessSection(orderId: orderModel.orderId, cartEntity: orderEntity.cartEntity,)
+      )
+      );
+      }
+    else{
+      PaypalPaymentEntity paypalPaymentEntity =
+      PaypalPaymentEntity.fromEntity(orderEntity);
+      var addOrderCubit = context.read<AddOrderCubit>();
 
-    Navigator.of(context).push(MaterialPageRoute(
-      builder: (BuildContext context) => PaypalCheckoutView(
-        sandboxMode: true,
-        clientId: kPaypalClientId,
-        secretKey: kPaypalSecretKey,
-        transactions: [
-          paypalPaymentEntity.toJson(),
-        ],
-        note: "Contact us for any questions on your order.",
-        onSuccess: (Map params) async {
-          Navigator.pop(context);
-          addOrderCubit.addOrder(order: orderEntity);
-        },
-        onError: (error) {
-          Navigator.pop(context);
-          log(error.toString());
-          showBar(context, 'حدث خطأ في عملية الدفع');
-        },
-        onCancel: () {
-          print('cancelled:');
-        },
-      ),
-    ));
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (BuildContext context) => PaypalCheckoutView(
+          sandboxMode: true,
+          clientId: kPaypalClientId,
+          secretKey: kPaypalSecretKey,
+          transactions: [
+            paypalPaymentEntity.toJson(),
+          ],
+          note: "Contact us for any questions on your order.",
+          onSuccess: (Map params) async {
+            addOrderCubit.addOrder(order: orderEntity);
+            Navigator.of(context).push(
+                MaterialPageRoute(
+                builder: (BuildContext context) =>SuccessSection(orderId:orderModel.orderId, cartEntity: orderEntity.cartEntity,)
+            )
+            );
+          },
+          onError: (error) {
+            Navigator.pop(context);
+            log(error.toString());
+            showBar(context, 'حدث خطأ في عملية الدفع');
+          },
+          onCancel: () {},
+        ),
+      )
+      );
+    }
   }
 }
