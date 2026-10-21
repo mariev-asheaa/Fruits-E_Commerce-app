@@ -40,4 +40,8 @@ class CartEntity {
     }
     return CartItemEntity(productEntity: product, quantity: 1);
   }
+
+ void clearCart() {
+    cartItems.clear();
+  }
 }
